@@ -99,14 +99,6 @@ class Post_Likes(Base):
     post_likes = Column(String(250))
     post_likes_id = Column(Integer, ForeignKey('post.id'))
 
-class Location(Base):
-    __tablename__ = 'Post_Location'
-    # Here we define columns for the table address.
-    # Notice that each column is also a normal Python instance attribute.
-    id = Column(Integer, primary_key=True)
-    post_location = Column(String(250))
-    post_location_id = Column(Integer, ForeignKey('post.id'))
-
 class Comments(Base):
     __tablename__ = 'Post_Comments'
     # Here we define columns for the table address.
